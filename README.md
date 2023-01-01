@@ -48,14 +48,14 @@ Steps to perform:
 9. Data preprocessing
     - Reviews and Install have some values that are still relatively very high. Before building a linear regression model, you need to reduce the skew. Apply log transformation (np.log1p) to Reviews and Installs.
     - Drop columns App, Last Updated, Current Ver, and Android Ver. These variables are not useful for our task.
-    - Get dummy columns for Category, Genres, and Content Rating. This needs to be done as the models do not understand categorical data, and all data should be numeric. Dummy encoding is one way to convert character fields to numeric. Name of dataframe should be inp2.
+    - Get dummy columns for Category, Genres, and Content Rating. This needs to be done as the models do not understand categorical data, and all data should be numeric. Label encoding is one way to convert character fields to numeric. Name of dataframe should be inp2.
 
 10. Train test split  and apply 70-30 split. Name the new dataframes df_train and df_test.
 
 11. Separate the dataframes into X_train, y_train, X_test, and y_test.
 
 12 . Model building
-    - Use linear regression as the technique
-    - Report the R2 on the train set
+    - Use Random Forest Regressor as the technique
+    - Report the MSE on the train set
 
-13. Make predictions on test set and report R2.
+13. Make predictions on test set and report MSE.
